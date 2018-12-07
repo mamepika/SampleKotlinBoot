@@ -1,4 +1,4 @@
-package com.example.SampleKotlinBoot
+package com.example.samplekotlinboot
 
 import org.junit.Test
 import org.junit.runner.RunWith
