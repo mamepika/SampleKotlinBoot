@@ -2,7 +2,8 @@ version: 0.2
 
 phases:
   install:
-    - echo install mvn
+    commands:
+      - echo install mvn
   build:
     commands:
       - echo Build started on `date`
