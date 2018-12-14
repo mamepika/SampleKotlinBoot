@@ -1,1 +1,1 @@
-select * from merchants;
+SELECT * FROM MERCHANTS;
