@@ -11,4 +11,4 @@ phases:
       - mvn package
 artifacts:
   files:
-    - target/samplekotlinboot-1.0-SNAPSHOT.jar
+    - target/samplekotlinboot-0.0.1-SNAPSHOT.jar
