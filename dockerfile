@@ -1,5 +1,5 @@
 # use alpine as base image
-FROM openjdk:jdk-alpine
+FROM openjdk:8-jdk-alpine
 # recommended by spring boot
 VOLUME /tmp
 # create directory for application
