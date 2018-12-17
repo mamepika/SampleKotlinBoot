@@ -20,8 +20,11 @@ public class Member {
     @Column(name = "CARDNO")
     private String cardNumber;
 
-    @Column(name = "CARDYUKOKIGEN_NENGETU")
+    @Column(name = "CARDYUKOKIGEN_NENGTU")
     private String cardExpireDate;
+
+    @Column(name = "CARDKAISYA_CODE")
+    private String cardCompanyCode;
 
     @Column(name = "KAIIN_STATUS")
     private String status;
@@ -64,6 +67,14 @@ public class Member {
 
     public void setCardExpireDate(String cardExpireDate) {
         this.cardExpireDate = cardExpireDate;
+    }
+
+    public String getCardCompanyCode() {
+        return cardCompanyCode;
+    }
+
+    public void setCardCompanyCode(String cardCompanyCode) {
+        this.cardCompanyCode = cardCompanyCode;
     }
 
     public String getStatus() {
