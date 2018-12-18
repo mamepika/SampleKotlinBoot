@@ -8,4 +8,6 @@ select
  KAIIN_STATUS
 FROM MST_KAIIN
 WHERE
- JIGYSYA_CODE = /*merchantCode*/'00000999';
+ JIGYSYA_CODE = /*merchantCode*/'00000999'
+AND
+ KAIIN_ID = /*memberId*/'000001111'
