@@ -16,9 +16,19 @@ class MemberRepositoryImpl (val memberDao: MemberDao):MemberRepository{
     override fun findByMerchantCodeAndMemberId(merchantCode: MerchantCode, memberId: MemberId) :com.example.samplekotlinboot.model.Member{
         return _mapToModel(memberDao.findByMerchantCodeAndMemberId(merchantCode,memberId))
     }
+
+
+    /**
+     * JavaのエンティティをKotlinのエンティティに変換
+     * @param entity 会員エンティティ
+     */
     private fun _mapToModel(entity: Member):com.example.samplekotlinboot.model.Member{
         return com.example.samplekotlinboot.model.Member(merchantCode = entity.merchantCode,
                                                          tenantCode = entity.tenantCode,
-                                                         memberId = entity.memberId,cardNumber = entity.cardNumber,cardExpireDate = entity.cardExpireDate,cardCompanyCode = entity.cardCompanyCode, status = entity.status)
+                                                         memberId = entity.memberId,
+                                                         cardNumber = entity.cardNumber,
+                                                         cardExpireDate = entity.cardExpireDate,
+                                                         cardCompanyCode = entity.cardCompanyCode,
+                                                         status = entity.status)
     }
 }
