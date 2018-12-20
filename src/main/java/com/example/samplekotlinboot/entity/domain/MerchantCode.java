@@ -1,8 +1,6 @@
-package com.example.samplekotlinboot.entity;
+package com.example.samplekotlinboot.entity.domain;
 
 import org.seasar.doma.Domain;
-
-import javax.validation.constraints.Min;
 
 /**
  *　事業者コード

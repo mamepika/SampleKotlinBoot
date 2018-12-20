@@ -1,8 +1,8 @@
 package com.example.samplekotlinboot.repository
 
 import com.example.samplekotlinboot.entity.Member
-import com.example.samplekotlinboot.entity.MemberId
-import com.example.samplekotlinboot.entity.MerchantCode
+import com.example.samplekotlinboot.entity.domain.MemberId
+import com.example.samplekotlinboot.entity.domain.MerchantCode
 import org.springframework.stereotype.Repository
 
 @Repository

@@ -1,7 +1,7 @@
 package com.example.samplekotlinboot.controller
 
-import com.example.samplekotlinboot.entity.MemberId
-import com.example.samplekotlinboot.entity.MerchantCode
+import com.example.samplekotlinboot.entity.domain.MemberId
+import com.example.samplekotlinboot.entity.domain.MerchantCode
 import com.example.samplekotlinboot.model.Member
 import com.example.samplekotlinboot.service.MemberService
 import org.springframework.validation.annotation.Validated
@@ -26,6 +26,6 @@ class MemberController (private val memberService: MemberService){
     @CrossOrigin
     @GetMapping("/members/{merchantCode}/{memberId}")
     fun findByMerchantCodeAndMemberId(@PathVariable merchantCode:String,@PathVariable memberId:String):Member{
-        return memberService.findByMerchantCodeAndMemberId(MerchantCode.of(merchantCode),MemberId.of(memberId))
+        return memberService.findByMerchantCodeAndMemberId(MerchantCode.of(merchantCode), MemberId.of(memberId))
     }
 }

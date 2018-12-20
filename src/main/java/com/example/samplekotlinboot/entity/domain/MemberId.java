@@ -1,4 +1,4 @@
-package com.example.samplekotlinboot.entity;
+package com.example.samplekotlinboot.entity.domain;
 
 import org.seasar.doma.Domain;
 
