@@ -3,6 +3,9 @@ package com.example.samplekotlinboot.entity;
 import org.seasar.doma.Entity;
 import org.seasar.doma.Id;
 
+/**
+ * 事業者エンティティ
+ */
 @Entity
 public class Merchant {
 

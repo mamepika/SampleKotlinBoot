@@ -4,6 +4,9 @@ import org.seasar.doma.Column;
 import org.seasar.doma.Entity;
 import org.seasar.doma.Table;
 
+/**
+ * 会員エンティティ
+ */
 @Table(name="MST_KAIIN")
 @Entity
 public class Member {
