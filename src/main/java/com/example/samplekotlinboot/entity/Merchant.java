@@ -1,5 +1,6 @@
 package com.example.samplekotlinboot.entity;
 
+import org.seasar.doma.Column;
 import org.seasar.doma.Entity;
 import org.seasar.doma.Id;
 
@@ -10,33 +11,62 @@ import org.seasar.doma.Id;
 public class Merchant {
 
     @Id
-    private String id;
+    @Column(name = "JIGYSYA_CODE")
+    private String merchantCode;
 
-    private String name;
+    @Column(name = "MEISYO")
+    private String merchantName;
 
-    private String address;
+    @Column(name = "SITE_MEISYO")
+    private String siteName;
 
-    public String getId() {
-        return id;
+    @Column(name = "SETUZOK_ID")
+    private String connectId;
+
+    public String getMerchantCode() {
+        return merchantCode;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setMerchantCode(String merchantCode) {
+        this.merchantCode = merchantCode;
     }
 
-    public String getName() {
-        return name;
+    public String getMerchantName() {
+        return merchantName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMerchantName(String merchantName) {
+        this.merchantName = merchantName;
     }
 
-    public String getAddress() {
-        return address;
+    public String getSiteName() {
+        return siteName;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setSiteName(String siteName) {
+        this.siteName = siteName;
     }
+
+    public String getConnectId() {
+        return connectId;
+    }
+
+    public void setConnectId(String connectId) {
+        this.connectId = connectId;
+    }
+
+    public String getConnectPassword() {
+        return connectPassword;
+    }
+
+    public void setConnectPassword(String connectPassword) {
+        this.connectPassword = connectPassword;
+    }
+
+    @Column(name = "SETUZOK_PWD")
+    private String connectPassword;
+
+
+
+
 }
