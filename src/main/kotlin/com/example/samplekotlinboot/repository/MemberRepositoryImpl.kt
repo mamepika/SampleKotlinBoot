@@ -3,6 +3,7 @@ package com.example.samplekotlinboot.repository
 import com.example.samplekotlinboot.entity.Member
 import com.example.samplekotlinboot.entity.domain.MemberId
 import com.example.samplekotlinboot.entity.domain.MerchantCode
+import org.seasar.doma.jdbc.SelectOptions
 import org.springframework.stereotype.Repository
 
 @Repository
@@ -12,7 +13,9 @@ class MemberRepositoryImpl (val memberDao: MemberDao):MemberRepository{
     override fun findByMerchantCode(merchantCode: MerchantCode): List<com.example.samplekotlinboot.model.Member> {
         return memberDao.findByMerchantCode(merchantCode).map { _mapToModel(it) }
     }
-
+    override fun findByMerchantCode(merchantCode: MerchantCode,options:SelectOptions): List<com.example.samplekotlinboot.model.Member> {
+        return memberDao.findByMerchantCode(merchantCode,options).map { _mapToModel(it) }
+    }
     override fun findByMerchantCodeAndMemberId(merchantCode: MerchantCode, memberId: MemberId) :com.example.samplekotlinboot.model.Member{
         return _mapToModel(memberDao.findByMerchantCodeAndMemberId(merchantCode,memberId))
     }

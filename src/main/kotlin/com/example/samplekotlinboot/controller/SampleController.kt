@@ -20,9 +20,4 @@ class SampleController (
         return "Hello Kotlin $message"
     }
 
-    @GetMapping("/sample")
-    fun sample():String{
-        sampleService.findAll()
-        return "sample"
-    }
 }

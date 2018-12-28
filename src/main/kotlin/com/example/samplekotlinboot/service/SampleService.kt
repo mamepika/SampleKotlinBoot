@@ -13,9 +13,5 @@ class SampleService (
         val merchantRepository: MerchantRepository
 ){
 
-    fun findAll():List<Merchant>{
-        return merchantRepository.findAll()
-    }
-
 
 }

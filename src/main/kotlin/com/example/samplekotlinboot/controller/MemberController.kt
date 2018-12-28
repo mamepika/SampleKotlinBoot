@@ -4,11 +4,11 @@ import com.example.samplekotlinboot.entity.domain.MemberId
 import com.example.samplekotlinboot.entity.domain.MerchantCode
 import com.example.samplekotlinboot.model.Member
 import com.example.samplekotlinboot.service.MemberService
+import org.seasar.doma.jdbc.SelectOptions
+import org.springframework.data.domain.Pageable
+import org.springframework.data.web.PageableDefault
 import org.springframework.validation.annotation.Validated
-import org.springframework.web.bind.annotation.CrossOrigin
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 /**
  * 会員 コントローラー
@@ -22,6 +22,13 @@ class MemberController (private val memberService: MemberService){
         return memberService.findByMerchantCode(MerchantCode.of(merchantCode))
     }
 
+    @CrossOrigin
+    @GetMapping("/members/{merchantCode}/paging")
+    fun listMembersPaging(@PathVariable @Validated merchantCode:String,@RequestParam(name = "offset",required = false)offset:Int):List<Member>{
+        val options:SelectOptions= SelectOptions.get().offset(offset).limit(5)
+
+        return memberService.findByMerchantCode(MerchantCode.of(merchantCode),options)
+    }
 
     @CrossOrigin
     @GetMapping("/members/{merchantCode}/{memberId}")
