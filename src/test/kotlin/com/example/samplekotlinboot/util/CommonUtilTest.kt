@@ -9,6 +9,6 @@ class CommonUtilTest {
     fun test(){
         val common = CommonUtil()
 
-        Assert.assertEquals(2,common.add(1,3))
+        Assert.assertEquals(4,common.add(1,3))
     }
 }
