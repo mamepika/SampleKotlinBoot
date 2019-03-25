@@ -9,7 +9,7 @@ interface MemberRepository {
 
 
     fun findByMerchantCode(merchantCode: MerchantCode):List<Member>
-
+/Users/satoutatsushi/Applications/SampleKotlinBoot/src/main/kotlin/com/example/samplekotlinboot/repository/MerchantRepositoryImpl.kt
     fun findByMerchantCode(merchantCode: MerchantCode,options:SelectOptions):List<Member>
 
 
